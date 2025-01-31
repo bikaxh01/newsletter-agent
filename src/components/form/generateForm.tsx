@@ -33,6 +33,7 @@ const formSchema = z.object({
     message: "Tone is required",
   }),
   audience: z.string().min(2, {
+    
     message: "Please select Audience",
   }),
 });
