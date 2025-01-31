@@ -11,7 +11,7 @@ import { useState } from "react";
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [previewData, setPreviewData] = useState("");
-  console.log("🚀 ~ Home ~ previewData:", previewData)
+  console.log("🚀 ~ Home ~ previewData:", previewData);
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Home() {
           <ResizablePanel>
             <GenerateForm
               previewResponse={setPreviewData}
-              newsLetter = {previewData}
+              newsLetter={previewData}
               loading={loading}
               setLoading={setLoading}
             />
@@ -32,7 +32,10 @@ export default function Home() {
                 Fill the form to generate news-letter
               </div>
             ) : loading || !previewData ? (
-              <Loader2Icon className=" animate-spin" />
+              <div className=" h-full w-full  flex  flex-col items-center justify-center font-semibold">
+                <Loader2Icon className=" animate-spin" />
+                <span className=" text-gray-600">Generating...This may take 1-2 min</span>
+              </div>
             ) : (
               <iframe
                 className=" w-full h-screen"
