@@ -33,7 +33,7 @@ const formSchema = z.object({
     message: "Tone is required",
   }),
   audience: z.string().min(2, {
-    
+
     message: "Please select Audience",
   }),
 });
@@ -46,7 +46,7 @@ function GenerateForm({
   const [readyToSend, setReadyToSend] = useState(false);
   const [subject, setSubject] = useState("");
   const [emails, setEmails] = useState("");
-
+  console.log(emails)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {},
