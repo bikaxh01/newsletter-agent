@@ -2,6 +2,10 @@ import { CreateBatchOptions, Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+export const config = {
+    maxDuration: 500,
+  };
+
 export async function sendEmail(
   emails: string[],
   newsLetter: string,

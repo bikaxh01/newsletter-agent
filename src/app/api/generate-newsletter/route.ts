@@ -11,6 +11,10 @@ interface PlanInterface {
   newsletterSections: [{ title: string; description: string }];
 }
 
+export const config = {
+  maxDuration: 500,
+};
+
 export async function POST(req: Request) {
   //get topic,tone,audience
 
