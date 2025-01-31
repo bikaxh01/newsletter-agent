@@ -11,7 +11,7 @@ import { useState } from "react";
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [previewData, setPreviewData] = useState("");
-  console.log("🚀 ~ Home ~ previewData:", previewData);
+ 
 
   return (
     <>
